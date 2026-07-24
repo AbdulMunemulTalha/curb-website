@@ -13,7 +13,10 @@ export default function LiveCount() {
 
   async function fetchCount() {
     try {
-      const res = await fetch("/api/waitlist-count", { cache: "no-store" });
+      const res = await fetch(`/api/waitlist-count?t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
       const data = await res.json();
       if (typeof data.count === "number") {
         setCount(data.count);
