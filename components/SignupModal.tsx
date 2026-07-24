@@ -74,6 +74,7 @@ export default function SignupModal({ email, referredByCode = null, onClose }: S
       }
 
       setSubmitted({ position: data.queuePosition, referralCode: data.referralCode });
+      window.dispatchEvent(new Event("curb:signup-success"));
     } catch {
       setError("Couldn't reach the server. Try again.");
     } finally {

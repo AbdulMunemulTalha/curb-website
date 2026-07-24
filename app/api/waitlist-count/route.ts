@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 
-export const revalidate = 30; // seconds — cheap freshness without hammering the DB
+export const dynamic = "force-dynamic"; // always hit the DB fresh — this gets polled for live updates
 
 export async function GET() {
   const supabase = createClient(
