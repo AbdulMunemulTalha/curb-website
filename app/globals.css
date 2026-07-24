@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0b0f14;
+  color: #f5f2ed;
+}
+
+::selection {
+  background-color: #2ba893;
+  color: #0b0f14;
+}
+
+/* Signal Ring sweep respects reduced-motion per DESIGN.md §9 — instant fill, no spin */
+@media (prefers-reduced-motion: reduce) {
+  .signal-ring-sweep {
+    animation: none !important;
+  }
+}
+
+/* Visible keyboard focus (quality floor from frontend-design skill) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #2ba893;
+  outline-offset: 2px;
+}
