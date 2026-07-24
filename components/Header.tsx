@@ -8,7 +8,7 @@ export default function Header() {
           Curb
         </span>
         <a
-          href="https://instagram.com"
+          href="https://instagram.com/abdulmunemultalha"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Curb on Instagram"

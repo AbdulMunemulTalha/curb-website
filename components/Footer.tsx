@@ -9,7 +9,7 @@ export default function Footer() {
         </span>
         <div className="flex items-center gap-4 font-body text-xs text-text-muted">
           <a
-            href="https://instagram.com"
+            href="https://instagram.com/abdulmunemultalha"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 transition-colors hover:text-text-secondary"
